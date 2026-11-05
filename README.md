@@ -41,6 +41,10 @@ Menu **Porte des 5 gemmes → 3. Construire pour Android (APK)**, puis copie
 (il faut autoriser l'installation d'applications de sources inconnues).
 Si Lumi reste muette : Paramètres Android → Synthèse vocale → installer la voix **française**.
 
+Deux fichiers dans `PorteDes5Gemmes/Assets/Plugins/Android/` règlent la version Android :
+`AndroidManifest.xml` déclare l'usage de la synthèse vocale (obligatoire depuis Android 11) et
+`settingsTemplate.gradle` fait télécharger les outils Android depuis les dépôts de Google en priorité.
+
 ## Où modifier quoi
 
 | Je veux… | Fichier |

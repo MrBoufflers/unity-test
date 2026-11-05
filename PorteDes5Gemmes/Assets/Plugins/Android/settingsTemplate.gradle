@@ -1,0 +1,28 @@
+// Modèle Gradle personnalisé : le dépôt Google passe en premier, puis le miroir officiel de Maven Central
+// hébergé par Google (utile quand Maven Central limite les téléchargements), puis les dépôts habituels.
+pluginManagement {
+    repositories {
+        **ARTIFACTORYREPOSITORY**
+        google()
+        maven { url 'https://maven-central.storage-download.googleapis.com/maven2/' }
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+include ':launcher'
+include ':unityLibrary'
+**INCLUDES**
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        **ARTIFACTORYREPOSITORY**
+        google()
+        maven { url 'https://maven-central.storage-download.googleapis.com/maven2/' }
+        mavenCentral()
+        flatDir {
+            dirs "${project(':unityLibrary').projectDir}/libs"
+        }
+    }
+}
