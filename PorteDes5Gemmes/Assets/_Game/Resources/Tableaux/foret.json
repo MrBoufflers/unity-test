@@ -1,0 +1,86 @@
+{
+  "id": "forest_red_gem",
+  "gem": "red",
+  "background": "fond_foret",
+  "hint_delays_s": [8, 15, 25],
+  "auto_solve_after_s": 35,
+  "gem_position": { "x": 800, "y": 430 },
+  "basket": { "x": 800, "y": 830 },
+  "lumi_home": { "x": 800, "y": 225 },
+  "lumi_sleep_spot": { "x": 1215, "y": 318 },
+  "decor": [
+    { "type": "pine", "x": 560, "y": 470, "scale": 0.8 },
+    { "type": "pine", "x": 900, "y": 460, "scale": 0.7 },
+    { "type": "pine", "x": 1290, "y": 470, "scale": 0.75 },
+    { "type": "tree", "x": 150, "y": 560, "scale": 1.2 },
+    { "type": "tree", "x": 380, "y": 520, "scale": 1.05 },
+    { "type": "tree", "x": 1080, "y": 520, "scale": 1.1 },
+    { "type": "branch", "x": 1100, "y": 345, "scale": 1 },
+    { "type": "tree", "x": 1470, "y": 560, "scale": 1.25 },
+    { "type": "bush", "x": 680, "y": 520, "scale": 0.8 },
+    { "type": "bush", "x": 1250, "y": 760, "scale": 0.7 },
+    { "type": "rock", "x": 470, "y": 790, "scale": 1 },
+    { "type": "rock", "x": 1080, "y": 800, "scale": 0.8 },
+    { "type": "grass", "x": 330, "y": 700, "scale": 1 },
+    { "type": "grass", "x": 870, "y": 690, "scale": 1 },
+    { "type": "grass", "x": 1280, "y": 600, "scale": 1 },
+    { "type": "grass", "x": 640, "y": 610, "scale": 1 }
+  ],
+  "turns": [
+    {
+      "player": "elea",
+      "type": "find_objects",
+      "prompt": {
+        "elea": "Elea, à toi ! Trouve les 3 champignons rouges.",
+        "isao": "Isao, à toi ! Trouve les 3 champignons rouges."
+      },
+      "success_line": { "elea": "Bravo Elea !", "isao": "Bravo Isao !" },
+      "retry_line": { "elea": "", "isao": "" },
+      "count_aloud": true,
+      "shuffle_positions": true,
+      "targets": [
+        { "id": "m_red_1", "x": 250, "y": 640, "color": "red" },
+        { "id": "m_red_2", "x": 790, "y": 580, "color": "red" },
+        { "id": "m_red_3", "x": 1170, "y": 560, "color": "red" }
+      ],
+      "distractors": [
+        { "id": "m_blue_1", "x": 440, "y": 560, "color": "blue" },
+        { "id": "m_yellow_1", "x": 600, "y": 690, "color": "yellow" },
+        { "id": "m_blue_2", "x": 990, "y": 680, "color": "blue" },
+        { "id": "m_yellow_2", "x": 1350, "y": 670, "color": "yellow" }
+      ],
+      "choices": []
+    },
+    {
+      "player": "isao",
+      "type": "choose_number",
+      "prompt": {
+        "isao": "Isao, à toi ! Combien de champignons Elea a-t-elle trouvés ?",
+        "elea": "Elea, à toi ! Combien de champignons Isao a-t-il trouvés ?"
+      },
+      "success_line": { "elea": "Oui ! Trois champignons !", "isao": "Oui ! Trois champignons !" },
+      "retry_line": { "elea": "Compte avec moi…", "isao": "Compte avec moi…" },
+      "answer_from": "previous_turn_count",
+      "choices": [2, 3, 4],
+      "choices_y": 440,
+      "choices_spacing": 330,
+      "targets": [],
+      "distractors": []
+    }
+  ],
+  "ambient_hotspots": [
+    { "id": "bird", "x": 1170, "y": 165, "reaction": "fly_away_and_back" },
+    { "id": "bush", "x": 1440, "y": 470, "reaction": "shiver" },
+    { "id": "owl", "x": 400, "y": 300, "reaction": "blink" },
+    { "id": "flower", "x": 100, "y": 470, "reaction": "bloom" }
+  ],
+  "lines": {
+    "intro": "Bonjour Isao, bonjour Elea ! Dans cette forêt se cache la gemme rouge. Il faut être deux pour la trouver !",
+    "gem_touch": "Touchez-la tous les deux !",
+    "celebration": "Bravo Isao et Elea ! Vous avez trouvé la gemme rouge !",
+    "goodnight": "À demain pour le Pays de l'Imaginaire !",
+    "count": ["Un !", "Deux !", "Trois !", "Quatre !", "Cinq !", "Six !", "Sept !", "Huit !", "Neuf !", "Dix !"],
+    "auto_help": "Je vais t'aider !",
+    "voice_test": "Bonjour, je suis Lumi !"
+  }
+}

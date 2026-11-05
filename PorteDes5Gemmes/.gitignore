@@ -1,0 +1,36 @@
+# Dossiers générés par Unity (ne jamais les versionner)
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+
+# Fichiers des éditeurs de code
+.vs/
+.vscode/
+.idea/
+*.csproj
+*.sln
+*.slnx
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Divers
+*.apk
+*.aab
+*.unitypackage
+sysinfo.txt
+crashlytics-build.properties
+.DS_Store
